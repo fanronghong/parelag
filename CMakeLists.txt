@@ -96,7 +96,7 @@ endif()
 # Whether to build the examples
 option(${PROJECT_NAME}_BUILD_EXAMPLES
   "Build the examples/ directory"
-  OFF)
+  ON)
 
 # Whether to use MARS
 option(${PROJECT_NAME}_USE_MARS
@@ -106,7 +106,7 @@ option(${PROJECT_NAME}_USE_MARS
 # Whether to build the testsuite
 option(${PROJECT_NAME}_BUILD_TESTSUITE
   "Build the testsuite/ directory"
-  OFF)
+  ON)
 
 # Whether to enable the testing framework
 option(${PROJECT_NAME}_ENABLE_TESTING
@@ -133,7 +133,7 @@ option(${PROJECT_NAME}_ENABLE_OPENMP
 
 option(${PROJECT_NAME}_ENABLE_PARMETIS
   "Should ParMETIS content be enabled?"
-  OFF)
+  ON)
 
 option(${PROJECT_NAME}_ENABLE_SUPERLU
   "Enable experimental code for the library"
@@ -289,6 +289,7 @@ include_directories(${METIS_INCLUDE_DIRS})
 #
 # If this collection of libraries cannot be found, SuiteSparse will be
 # incomplete and a fatal error will have occured
+# TODO 需要安装 suitesparse
 find_package(SuiteSparse REQUIRED)
 include_directories(${SuiteSparse_INCLUDE_DIRS})
 

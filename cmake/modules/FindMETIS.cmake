@@ -16,12 +16,16 @@
 #
 
 # Find the header
+set(METIS_DIR /home/fan/ENV4PKGs/metis/install)
+message("---> METIS_DIR: ${METIS_DIR}")
 find_path(METIS_INCLUDE_DIRS metis.h
   HINTS ${METIS_DIR} $ENV{METIS_DIR}
   PATH_SUFFIXES include
   NO_DEFAULT_PATH
   DOC "Directory with METIS header.")
 find_path(METIS_INCLUDE_DIRS metis.h)
+message("---> METIS_INCLUDE_DIRS: ${METIS_INCLUDE_DIRS}")
+
 
 # Find the library
 find_library(METIS_LIBRARY metis

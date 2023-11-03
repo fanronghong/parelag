@@ -19,6 +19,7 @@
 #   - HYPRE_INCLUDE_DIRS
 
 # Find the header files
+set(HYPRE_DIR /home/fan/ENV4PKGs/hypre/install)
 find_path(HYPRE_INCLUDE_DIRS HYPRE.h
   HINTS ${HYPRE_DIR} $ENV{HYPRE_DIR}
   PATH_SUFFIXES include

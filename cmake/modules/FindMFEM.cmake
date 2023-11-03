@@ -23,6 +23,7 @@ find_package(METIS REQUIRED)
 find_package(HYPRE REQUIRED)
 
 # Start by finding the MFEM config.mk file
+set(MFEM_DIR /home/fan/ENV4PKGs/mfem/install)
 find_file(MFEM_CONFIG_FILE config.mk
   HINTS ${MFEM_DIR} $ENV{MFEM_DIR} 
   HINTS ${MFEM_DIR}/build $ENV{MFEM_DIR}/build ${MFEM_DIR} $ENV{MFEM_DIR} ${MFEM_DIR}/share/mfem $ENV{MFEM_DIR}/share/mfem
